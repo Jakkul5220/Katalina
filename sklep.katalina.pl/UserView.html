@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalina</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/text.css">
+    <link rel="stylesheet" href="./CSS/Animate.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="./JS/js.js"></script>
+    <!-- Biblioteka do animacji -->
+    <link rel="stylesheet" href="CSS/Animate.css">
+</head>
+<body>
+
+
+<!-- Górny pasek -->
+<div class="cont" style="width: 100%; background-color: black;">
+    <nav class="navbar navbar-dark container nav-main-web" style="background-color: black;">
+        <div class="nav-mobile">
+
+            <!-- Odnośnik do galerii -->
+            <a href="#">OFERTA</a>
+
+            <!-- Odnośnik do Kontaktu -->
+            <a href="MainWindow.html#kontakt" style="margin-left: 10px;">KONTAKT </a>
+
+        </div>
+        <img class="img-fluid logo-mobile" src="Content/logo.png" alt="" style="max-height: 40px;">
+        <div class="user-container users-controls-mobile">
+
+            <!-- Użytkownik -->
+            <a href="UserView.html" style="font-size: 15px;"><i class="fas fa-user-alt"></i> user</a>
+
+            <!-- Koszyk -->
+            <a class="fas shopping-cart" href="Koszyk.html" style="font-size: 15px;"><i class="fas fa-shopping-cart"></i>(2)</a>
+
+            <!-- Wyloguj się -->
+            <a href="index.html" style="font-size: 10px;">Wyloguj się</a>
+        </div>
+    </nav>
+</div>
+
+<!-- Separator-->
+<div class="section-separator container" style="margin-top: 20px;">
+    <p class="text-center">
+        Twój profil
+    </p>
+</div>
+
+
+<div class="container profileDetails text-center">
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <td>Imię:</td>
+            <td>Patryk</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        <tr>
+            <td>Nazwisko:</td>
+            <td>Oshibuchi</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        <tr>
+            <td>Adres e-mail:</td>
+            <td>patrykoshi@gmail.com</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        <tr>
+            <td>Nip:</td>
+            <td>1234567890</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        <tr>
+            <td>Numer kontaktowy</td>
+            <td>509-232-604</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        <tr>
+            <td>Adres Firmy</td>
+            <td>Modlińska 129A M.5 03-186 Warszawa</td>
+            <td><a href="#">Edytuj</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section-separator container" style="margin-top: 50px; margin-bottom: 50px;">
+    <p class="text-center">
+        Zmień hasło
+    </p>
+</div>
+
+
+
+<div class="container changePassword">
+    <div class="row">
+        <div class="col-0 col-sm-4"></div>
+        <form class="col-12 col-sm-4" method="post" action="#">
+            <input type="password" class="form-control input-lg" id="password" placeholder="Nowe hasło" style="margin-top: 15px;"/>
+            <input type="password" class="form-control input-lg" id="password" placeholder="Powtórz hasło" style="margin-top: 15px;"/>
+            <button type="submit"  name="go" class="btn btn-lg btn-primary btn-block" style="margin-top: 15px;">Zmień</button>
+        </form>
+        <div class="col-0 col-sm-4"></div>
+    </div>
+</div>
+
+
+<div class="section-separator container" style="margin-top: 50px; margin-bottom: 50px;">
+    <p class="text-center">
+        Historia zamówień
+    </p>
+</div>
+
+
+<div class="container history">
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th scope="col">ID:</th>
+            <th scope="col">Data:</th>
+            <th scope="col">Ilość sztuk (suma):</th>
+            <th scope="col">Całkowity koszt zamówienia (PLN):</th>
+            <th scope="col">Status:</th>
+            <th scope="col">Wyświetl szczegóły:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>16-03-2018</td>
+            <td>16</td>
+            <td>800.00</td>
+            <td style="color:red">Odrzucono</td>
+            <td><a href="#">Pokaż szczegóły.</a></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>21-07-2018</td>
+            <td>21</td>
+            <td>1449.00</td>
+            <td style="color:green">Potwierdzono</td>
+            <td><a href="#">Pokaż szczegóły.</a></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>02-08-2018</td>
+            <td>10</td>
+            <td>500.00</td>
+            <td style="color:green">Potwierdzono</td>
+            <td><a href="#">Pokaż szczegóły.</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

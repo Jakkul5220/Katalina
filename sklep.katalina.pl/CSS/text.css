@@ -1,9 +1,12 @@
 body, html {
     height: 100%;
-    color: white;
 }
 
-.logInDiv {
+
+/* Okno Logowania / Rejestracji */
+
+
+.page {
     background-image: url("../Content/Models/logginpic.jpg");
     height: 100%;
     background-position: center;
@@ -11,7 +14,17 @@ body, html {
     background-size: cover;
 }
 
-
+.form-div-re{
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 390px;
+    height: 600px;
+}
 .form-div{
     background-color:rgba(0,0,0,0.5);
     position: absolute;
@@ -27,3 +40,183 @@ body, html {
 .info-logIn-property{
     background-color:rgba(0,0,0,0.5);
 }
+
+
+
+/* Główna strona */
+
+.nav-main-web a{
+
+    color:white;
+    letter-spacing: 3px;
+}
+
+.nav-main-web a:hover{
+    text-decoration: none;
+    color:darkgray;
+}
+
+.user-container a{
+    margin-left: 20px;
+}
+
+.first-section p{
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 55px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: black;
+}
+
+.section-separator {
+    height: 10px;
+    border-bottom: 1px solid;
+}
+
+.section-separator  p{
+    padding-top: 20px;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.bigger-text{
+   font-size:  20px;
+}
+
+.lower-text{
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.promotion-section .select{
+    margin-bottom: 50px;
+}
+.select:hover{
+    transition: .1s;
+    box-shadow: 0 0 30px black;
+    cursor: pointer;
+}
+
+
+.contact{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Główna strona - mobilka */
+
+footer{
+
+    margin-top: 150px;
+    background-color: darkgray;
+    height: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-mobile{
+        margin-left: 50px;
+        border-bottom: 1px solid white;
+    }
+
+    .logo-mobile{
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-mobile{
+        font-size: 25px;
+        margin-left: 55px;
+    }
+
+    .logo-mobile{
+        display: none;
+    }
+
+    .users-controls-mobile{
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+
+    .remove{
+        margin-left: 150px;
+        margin-bottom: 35px;
+    }
+}
+
+
+/* Koszyk */
+
+
+
+.cart{
+    margin-top: 150px;
+}
+
+.info-cart{
+    margin-top: 35px;
+}
+
+.cart-element{
+    border: 1px solid;
+    margin-top: 30px;
+}
+
+
+.addorremove{
+    width: 40px;
+}
+
+.remove{
+    margin-top: 120px;
+}
+
+
+
+/* Profil uzytkownika */
+
+
+.profileDetails{
+    margin-top: 50px;
+}
+
+
+/*Widok produktu*/
+
+.product-item{
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

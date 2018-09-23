@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalina - Koszyk</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/text.css">
+    <link rel="stylesheet" href="./CSS/Animate.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="./JS/js.js"></script>
+    <!-- Biblioteka do animacji -->
+    <link rel="stylesheet" href="CSS/Animate.css">
+
+</head>
+<body>
+
+
+<!-- Górny pasek -->
+<div class="cont" style="width: 100%; background-color: black;">
+    <nav class="navbar navbar-dark container nav-main-web" style="background-color: black;">
+        <div class="nav-mobile">
+
+            <!-- Odnośnik do galerii -->
+            <a href="#">OFERTA</a>
+
+            <!-- Odnośnik do Kontaktu -->
+            <a href="MainWindow.html#kontakt" style="margin-left: 10px;">KONTAKT </a>
+
+        </div>
+        <img class="img-fluid logo-mobile" src="Content/logo.png" alt="" style="max-height: 40px;">
+        <div class="user-container users-controls-mobile">
+
+            <!-- Użytkownik -->
+            <a href="UserView.html" style="font-size: 15px;"><i class="fas fa-user-alt"></i> user</a>
+
+            <!-- Koszyk -->
+            <a class="fas shopping-cart" href="Koszyk.html" style="font-size: 15px;"><i class="fas fa-shopping-cart"></i>(2)</a>
+
+            <!-- Wyloguj się -->
+            <a href="index.html" style="font-size: 10px;">Wyloguj się</a>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Separator-->
+<div class="section-separator container" style="margin-top: 20px;">
+    <p class="text-center">
+        Twój koszyk
+    </p>
+</div>
+
+
+
+<!-- Koszyk -->
+<div class="cart container">
+
+
+    <!-- Klasa "cart-element" element wsadzony do koszyka-->
+    <div class="col-12 cart-element container-fluid">
+        <div class="row">
+            <div class="pic-and-model col-12 col-md-5">
+                <!-- Kolekcja -->
+                <p class="bigger-text text-center">
+                    Motto
+                </p>
+                <!-- Model -->
+                <p class="lower-text text-center">
+                    Model
+                </p>
+                <!-- Zdjęcie oprawki - pod kątem -->
+                <a href="WidokProduktu.html">
+                    <img class="img-fluid select" src="Content/Oprawki/MT%20535%20c%203_2D_0002_large.jpg" alt="" style="margin-bottom: 10px;">
+                </a>
+            </div>
+
+
+            <div class="text-center col-12 col-md-7 info-cart">
+                <!--Cena -->
+                <p class="lower-text text-center">
+                    <label id="cena1">69</label> pln/szt
+                </p>
+
+                <!-- Ilosc sztuk -->
+                <p class="lower-text text-center">
+
+                    <!-- WAŻNE!!  id musi mieć pod koniec ID, które będzie wymagane do skrytpu dodaj usun. tutaj mamy "howManyGlasses1"   nastepne będzie "howManyGlasses2"  Etc.-->
+                    ilość sztuk: <label id="howManyGlasses1">1</label>
+                </p>
+
+                <!-- Przyciski usuń sztuki    WAŻNE !!  onclick="remove(ID LEBELA WYŻEJ linijka 100  ,  ID LABELA LINIJKA 93, ID LEBELA linijka 115, ID LEBELA LINIJKA 119);" -->
+                <button type="button" class="btn btn-outline-dark addorremove" onclick="remove('howManyGlasses1','cena1','final1');">-</button>
+
+
+
+                <!-- Przyciski dodaj sztuki    WAŻNE !!  onclick="add('howManyGlasses1','max1','cena1','final1')" -->
+                <button type="button" class="btn btn-outline-dark addorremove" onclick="add('howManyGlasses1','max1','cena1','final1');">+</button>
+
+
+
+                <!-- tutaj też ważne, abym mógł zidentyfikować tą wartość w skrypcie. Unikalne id o tej samej końcówce co ilość sztuk "max1" -->
+                <p class="lower-text text-center" style="margin-top: 10px;">
+                    Maksymalna ilość sztuk: <label id="max1">24</label>
+                </p>
+
+                <p class="lower-text text-center" style="margin-top: 10px;">
+                    Cena za komplet : <label id="final1">69</label> zł.
+                </p>
+                <button type="button" class="btn btn-outline-dark" >Usuń</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- KOLEJNY PRZYKŁADOWY ELEMENT. ZOBACZ, ŻE ID LEBEL'ÓW SĄ O JEDEN WIĘKSZE OD ID'KÓW LEBELÓW POPRZEDNIEGO ELEMENTU.-->
+    <div class="col-12 cart-element container-fluid">
+        <div class="row">
+            <div class="pic-and-model col-12 col-md-5">
+                <p class="bigger-text text-center">
+                    Motto
+                </p>
+                <p class="lower-text text-center">
+                    Model
+                </p>
+                <a href="WidokProduktu.html">
+                    <img class="img-fluid select" src="Content/Oprawki/MT%20560%20c%206_2D_0002.jpg" alt="" style="margin-bottom: 10px;">
+                </a>
+            </div>
+            <div class="text-center col-12 col-md-7 info-cart">
+                <p class="lower-text text-center">
+                    <label id="cena2">69</label> pln/szt
+                </p>
+                <p class="lower-text text-center">
+                    ilość sztuk: <label id="howManyGlasses2">1</label>
+                </p>
+                <button type="button" class="btn btn-outline-dark addorremove" onclick="remove('howManyGlasses2','cena2','final2');">-</button>
+                <button type="button" class="btn btn-outline-dark addorremove" onclick="add('howManyGlasses2','max2','cena2','final2');">+</button>
+                <p class="lower-text text-center" style="margin-top: 10px;">
+                    Maksymalna ilość sztuk: <label id="max2">24</label>
+                </p>
+                <p class="lower-text text-center" style="margin-top: 10px;">
+                    Cena za komplet : <label id="final2">69</label> zł.
+                </p>
+                <button type="button" class="btn btn-outline-dark" >Usuń</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container podsumowanie">
+        <div class="row">
+            <div class="col-3"></div>
+
+            <a class="col-6" href="Podsumowanie.html" style="text-decoration: none">
+                <button type="submit"  name="go" class="btn btn-lg btn-primary btn-block" style="margin-top: 15px;">Podsumowanie</button>
+            </a>
+
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+<script>
+    function remove(id,price,final){
+        var element = document.getElementById(id).innerHTML;
+        var x = parseInt(element);
+
+        if(x == 0){
+            document.getElementById(id).innerHTML = "0";
+        }
+        else{
+            x --;
+            document.getElementById(id).innerHTML = x;
+        }
+
+        finalPriceOfModel(x,parseInt(document.getElementById(price).innerHTML),final);
+    }
+
+    function add(id,max,price,final){
+        var element = document.getElementById(id).innerHTML;
+        var maxx = parseInt(document.getElementById(max).innerHTML);
+        var x = parseInt(element);
+
+        if(maxx == x){
+            document.getElementById(id).innerHTML = x;
+        }
+        else{
+            x++;
+            document.getElementById(id).innerHTML = x;
+        }
+        finalPriceOfModel(x,parseInt(document.getElementById(price).innerHTML),final);
+    }
+
+
+    function finalPriceOfModel(szt,cena,gdzieUmiescicWynik){
+        var x = szt * cena;
+        document.getElementById(gdzieUmiescicWynik).innerHTML = x;
+    }
+</script>
+
+
+
+</body>
+</html>
